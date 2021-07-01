@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.Language.Lang }}">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {{- if $.Page.Title -}}
+            {{- $.Page.Title -}}
+        {{- else -}}
+            {{- $.Site.Title -}}
+        {{- end -}}
+    </title>
+    <meta name="title" content="
+        {{- if $.Page.Title -}}
+            {{- $.Page.Title -}}
+        {{- else -}}
+            {{- $.Site.Title -}}
+        {{- end -}}">
+    <meta name="description" content="{{- $.Page.Description -}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Roboto&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+        {{ block "main" . }}
+        {{ end }}
+    </div>
+</body>
+</html>

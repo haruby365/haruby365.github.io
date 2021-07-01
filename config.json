@@ -1,0 +1,10 @@
+{
+   "baseURL": "http://www.haruby.com/",
+   "languageCode": "en-us",
+   "DefaultContentLanguage": "en",
+   "title": "HARUBY",
+   "theme": "",
+   "hasCJKLanguage": true,
+   "taxonomies": {
+   }
+}
