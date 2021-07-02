@@ -10,6 +10,9 @@
 
 ## Social
 
+   * Blog(Korean)  
+   [https://blog.naver.com/haruby365](https://blog.naver.com/haruby365)
+
    * Twitter  
    [@haruby365](https://twitter.com/haruby365)
 
