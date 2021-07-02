@@ -10,9 +10,6 @@
 
 ## Social
 
-   * Blog(Korean)  
-   [https://haruby365.wordpress.com](https://haruby365.wordpress.com)
-
    * Twitter  
    [@haruby365](https://twitter.com/haruby365)
 
