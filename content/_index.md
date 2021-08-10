@@ -3,6 +3,8 @@
 }
 # HARUBY
 
+---
+
 ## Contact
 
    * E-mail  
@@ -12,6 +14,13 @@
 
    * Blog(Korean)  
    [https://blog.naver.com/haruby365](https://blog.naver.com/haruby365)
+
+---
+
+## Reserved/Inactive
+
+   **Please do not contact to these accounts.**  
+   **If do, you won't get response in time.**
 
    * Twitter  
    [@haruby365](https://twitter.com/haruby365)
@@ -28,4 +37,6 @@
    * GitHub  
    [https://github.com/haruby365](https://github.com/haruby365)
 
-   * *It is impersonated account if not listed here.*
+---
+
+   *It is impersonated account if not listed in this page.*
