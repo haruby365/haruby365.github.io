@@ -17,10 +17,10 @@
 
 ---
 
-## Reserved/Inactive
+### Reserved/Inactive
 
-   **Please do not contact to these accounts.**  
-   **If do, you won't get response in time.**
+   Please do not contact to these accounts.  
+   If do, you won't get response in time.
 
    * Twitter  
    [@haruby365](https://twitter.com/haruby365)
