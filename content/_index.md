@@ -22,14 +22,17 @@
    Please do not contact to these accounts.  
    If do, you won't get response in time.
 
-   * Twitter  
-   [@haruby365](https://twitter.com/haruby365)
+   * ArtStation  
+   [https://www.artstation.com/haruby](https://www.artstation.com/haruby)
 
    * Pixiv  
    [http://pixiv.me/haruby](http://pixiv.me/haruby)
 
-   * ArtStation  
-   [https://www.artstation.com/haruby](https://www.artstation.com/haruby)
+   * Instagram  
+   [https://www.instagram.com/haruby365](https://www.instagram.com/haruby365)
+
+   * Twitter  
+   [https://twitter.com/haruby365](https://twitter.com/haruby365)
 
    * GitLab  
    [https://gitlab.com/haruby365](https://gitlab.com/haruby365)
