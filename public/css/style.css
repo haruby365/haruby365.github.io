@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Barlow', sans-serif;
     display: table;
     margin-left: auto;
     margin-right: auto;
@@ -8,4 +8,8 @@ body {
 h1, h2, h3 {
     font-family: 'Lexend Mega', sans-serif;
     text-align: center;
+}
+
+h2, h3 {
+    text-align: left;
 }

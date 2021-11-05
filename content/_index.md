@@ -5,22 +5,18 @@
 
 ---
 
-## Contact
-
-   * E-mail  
-   [haruby365@gmail.com](mailto:haruby365@gmail.com)
-
-## Social
+Welcome to **Jong-il Hong**'s landing page!  
 
    * Blog(Korean)  
    [https://blog.naver.com/haruby365](https://blog.naver.com/haruby365)
 
+   * [haruby365@gmail.com](mailto:haruby365@gmail.com)
+
 ---
+### Others
 
-### Reserved/Inactive
-
-   Please do not contact to these accounts.  
-   If do, you won't get response in time.
+   Please do not comments or send messages to these accounts.  
+   Not often monitor them, therefore, you won't receive response in time.
 
    * ArtStation  
    [https://www.artstation.com/haruby](https://www.artstation.com/haruby)
