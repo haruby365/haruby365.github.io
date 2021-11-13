@@ -1,12 +1,12 @@
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     display: table;
     margin-left: auto;
     margin-right: auto;
 }
 
 h1, h2, h3 {
-    font-family: 'Lexend Mega', sans-serif;
+    font-family: "Lexend Mega", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     text-align: center;
 }
 
