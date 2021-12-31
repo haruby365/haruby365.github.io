@@ -16,28 +16,21 @@ h2, h3 {
     text-align: left;
 }
 
-a,
-.link {
-    color:#06c;
-    letter-spacing:inherit
+a {
+    color: #06c;
+    letter-spacing: inherit
 }
-a:link,
-a:visited,
-.link:link,
-.link:visited {
-    text-decoration:none
+a:link, a:visited {
+    text-decoration: none
 }
-a:hover,
-.link:hover {
-    text-decoration:underline
+a:hover {
+    text-decoration: underline
 }
-a:active,
-.link:active {
-    text-decoration:none
+a:active {
+    text-decoration: none
 }
-a:disabled,
-.link:disabled {
-    opacity:.32
+a:disabled {
+    opacity: 0.32
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +40,6 @@ a:disabled,
     }
 
     a {
-        color:#2997ff
+        color: #2997ff
     }
 }
