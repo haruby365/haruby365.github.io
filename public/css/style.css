@@ -69,6 +69,11 @@ blockquote:after {
     text-align: end;
 }
 
+.footer-comment {
+    font-size: small;
+    text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: rgb(29, 29, 31);

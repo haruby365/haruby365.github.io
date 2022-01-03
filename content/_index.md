@@ -68,4 +68,4 @@ Welcome to **Jong-il Hong**'s landing page!
 
 ---
 
-   *It is impersonated account if not listed in this page.*
+<p class="footer-comment">© 2021-2022 Jong-il Hong</p>
