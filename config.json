@@ -5,6 +5,13 @@
    "title": "HARUBY",
    "theme": "",
    "hasCJKLanguage": true,
+   "markup": {
+      "goldmark": {
+         "renderer": {
+            "unsafe": true
+         }
+      }
+   },
    "taxonomies": {
    }
 }
