@@ -3,6 +3,8 @@ body {
     display: table;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
     background: white;
     color: rgb(29, 29, 31);
 }

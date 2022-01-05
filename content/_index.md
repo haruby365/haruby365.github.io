@@ -58,7 +58,7 @@ Welcome to **Jong-il Hong**'s landing page!
       * Figure drawing and digital painting.
    1. Self-developed several applications.
       * Photoshop extensions.
-      * Digital artist assistant apps.
+      * Digital artist assistant applications.
       * And more.
    1. Doing personal works.
       * Character design and illustration.
