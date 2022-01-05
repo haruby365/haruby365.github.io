@@ -78,8 +78,8 @@ blockquote:after {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: rgb(29, 29, 31);
-        color: rgb(245, 245, 247);
+        background: rgb(39, 39, 41);
+        color: rgb(238, 238, 240)
     }
 
     a {
