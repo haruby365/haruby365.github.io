@@ -1,0 +1,15 @@
+.list-container {
+    width: calc(100% - 40px);
+}
+
+@media screen and (min-width: 800px) {
+    .list-container {
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .list-container {
+        width: 1000px;
+    }
+}

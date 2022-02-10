@@ -1,8 +1,6 @@
 {
    "title": "HARUBY"
 }
-# HARUBY
-
 ---
 
 Welcome to **Jong-il Hong**'s landing page!  
@@ -67,5 +65,3 @@ Welcome to **Jong-il Hong**'s landing page!
    <p class="post-comment">Updated in January 2022</p>
 
 ---
-
-<p class="footer-comment">© 2021-2022 Jong-il Hong</p>

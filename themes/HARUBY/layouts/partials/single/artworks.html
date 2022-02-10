@@ -1,0 +1,142 @@
+{{ $imageCount := (len .Params.Images) }}
+<div id="pageContent" class="page-content-container">
+    <div class="post-container">
+        <div class="main-image-container">
+            <div class="main-image-number-container">
+                <div class="main-image-number-wrapper">
+                    <span id="imageNumberText"></span>
+                </div>
+            </div>
+            {{ range $imageIndex, $imageItem := .Params.Images }}
+                <div class="main-image-wrapper zoom-in-cursor" onclick="showImageViewer({ imageElementId: 'image{{- print $imageIndex -}}', url: '{{- print $imageItem.Url -}}' });">
+                    <img id="image{{- print $imageIndex -}}" class="main-image" src="{{- print $imageItem.Url -}}" alt="{{- $.Page.Title -}}" />
+                </div>
+                {{ if ne (add $imageIndex 1) $imageCount }}
+                <div class="main-image-padding"></div>
+                {{ end }}
+            {{ end }}
+        </div>
+        <div class="main-content-container">
+            <div class="main-text-container">
+                <h2 class="content-title-text">{{- $.Page.Title -}}</h2>
+                <p class="content-date-text">{{- time.Format "January 2, 2006" $.Page.Date -}}</p>
+                {{ $.Page.Content }}
+                <div class="main-tags-container">
+                    <ul class="horizontal-stack-list">
+                        {{ range $.Params.tags }}
+                        <li>
+                            <a href="{{ `/tags/` | relLangURL }}{{ . | urlize }}">
+                                <span class="main-tag-text">{{ print . }}</span>
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div class="social-buttons-container">
+                    <ul class="horizontal-stack-list">
+                        <li>
+                            {{- if .Params.NaverBlogUrl -}}
+                            <a class="button-link naver-back-color" style="margin: 0 4px 0 0;" href="{{- .Params.NaverblogUrl -}}" title="View in Naver Blog" target="_blank">
+                                <ul class="horizontal-stack-list">
+                                    <li>
+                                        <img class="social-button-icon" src="/socialIcons/naverBlog_white.svg" alt="naver blog" />
+                                    </li>
+                                    <li>
+                                        <span class="social-button-text">View</span>
+                                    </li>
+                                </ul>
+                            </a>
+                            {{- end -}}
+                            {{- if .Params.PixivUrl -}}
+                            <a class="button-link pixiv-back-color" style="margin: 0 4px 0 0;" href="{{- .Params.PixivUrl -}}" title="View in Pixiv" target="_blank">
+                                <ul class="horizontal-stack-list">
+                                    <li>
+                                        <img class="social-button-icon" src="/socialIcons/pixiv_white.svg" alt="pixiv" />
+                                    </li>
+                                    <li>
+                                        <span class="social-button-text">View</span>
+                                    </li>
+                                </ul>
+                            </a>
+                            {{- end -}}
+                            {{- if .Params.ArtstationUrl -}}
+                            <a class="button-link artstation-back-color" style="margin: 0 4px 0 0;" href="{{- .Params.ArtstationUrl -}}" title="View in Artstation" target="_blank">
+                                <ul class="horizontal-stack-list">
+                                    <li>
+                                        <img class="social-button-icon" src="/socialIcons/artstation_white.svg" alt="artstation" />
+                                    </li>
+                                    <li>
+                                        <span class="social-button-text">View</span>
+                                    </li>
+                                </ul>
+                            </a>
+                            {{- end -}}
+                            {{- if .Params.TwitterUrl -}}
+                            <a class="button-link twitter-back-color" style="margin: 0 4px 0 0;" href="{{- .Params.TwitterUrl -}}" title="View in Twitter" target="_blank">
+                                <ul class="horizontal-stack-list">
+                                    <li>
+                                        <img class="social-button-icon" src="/socialIcons/twitter_white.svg" alt="twitter" />
+                                    </li>
+                                    <li>
+                                        <span class="social-button-text">View</span>
+                                    </li>
+                                </ul>
+                            </a>
+                            {{- end -}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-category-container">
+                <a class="gray-text-link" href="{{ `/` | relLangURL }}{{ .Type | urlize }}">
+                    {{ $sectionIndexPage := .Site.GetPage (.Type | urlize) }}
+                    <span>View list of {{ print $sectionIndexPage.Params.SectionName }}</span>
+                </a>
+            </div>
+            <div class="other-posts-viewport">
+                <div class="other-posts-container">
+                    {{ $thisPage := . }}
+                    {{ range .Site.Pages }}
+                        {{ if and (eq .Kind "page") (eq .Type $thisPage.Type) }}
+                        <div class="other-posts-item-container">
+                            <div style="position: relative;">
+                                {{ if eq .File.UniqueID $thisPage.File.UniqueID }}
+                                <div id="thisPostInPostsElement" class="other-post-this-thumbnail-wrapper">
+                                    <img class="other-post-this-thumbnail-image" src="{{ .Params.ThumbnailImage }}" />
+                                </div>
+                                {{ else }}
+                                <a class="other-post-link" href="{{ .Permalink }}">
+                                    <div class="other-post-thumbnail-wrapper">
+                                        <img class="other-post-thumbnail-image" src="{{ .Params.ThumbnailImage }}" />
+                                    </div>
+                                </a>
+                                {{ end }}
+                                
+                                {{ if gt $imageCount 1 }}
+                                <div class="other-post-counter-container">
+                                    <ul class="horizontal-stack-list">
+                                        <li>
+                                            <img class="other-post-counter-image" src="/uiIcons/image.svg" />
+                                        </li>
+                                        <li>
+                                            <span class="other-post-counter-text">{{- print $imageCount -}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="imageViewer" class="full-screen-display zoom-out-cursor" style="display: none;" onclick="hideImageViewer();">
+    <div class="viewer-image-container">
+        <div class="viewer-image-wrapper">
+            <img id="imageViewerImage" class="viewer-image" alt="{{- $.Page.Title -}}" />
+        </div>
+    </div>
+</div>

@@ -25,10 +25,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 </head>
-<body>
-    <div id="content">
-        {{ block "main" . }}
-        {{ end }}
-    </div>
+<body class="center-table-container">
+<div id="content">
+    {{ partial "header.html" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+</div>
 </body>
 </html>
