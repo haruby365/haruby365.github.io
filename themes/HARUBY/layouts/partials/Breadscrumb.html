@@ -1,0 +1,35 @@
+<ul class="horizontal-stack-list" style="font-size: 16px; margin-bottom: 30px; white-space: nowrap;">
+    <li>
+        <a class="gray-text-link" href="{{ .Parent.RelPermalink }}">
+            <svg style="display: block; width: 1em; height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"/></svg>
+        </a>
+    </li>
+    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+</ul>
+{{ define "breadcrumbnav" }}
+    {{ if .p1.Parent }}
+        {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+    {{ else if not .p1.IsHome }}
+        {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+    {{ end }}
+
+    {{ $scratch := newScratch }}
+    {{ if .p1.IsHome }}
+        {{ $scratch.Set "titleText" .p1.Params.SectionName }}
+    {{ else }}
+        {{ if eq .p1.Kind "term" }}
+            {{ $scratch.Set "titleText" (print "#" .p1.Title) }}
+        {{ else }}
+            {{ $scratch.Set "titleText" .p1.Title }}
+        {{ end }}
+    {{ end }}
+
+    <li style="margin: 1px 2px;">/</li>
+    <li>
+    {{ if eq .p1 .p2 }}
+        <span>{{ $scratch.Get "titleText" }}</span>
+    {{ else }}
+        <a class="gray-text-link" href="{{ .p1.RelPermalink }}">{{ $scratch.Get "titleText" }}</a>
+    {{ end }}        
+    </li>
+{{ end }}

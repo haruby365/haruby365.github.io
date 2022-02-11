@@ -1,0 +1,30 @@
+{{ $sourcePages := .GridListContainer_SourceContentPages }}
+<div class="gallery-grid-list-viewport">
+    <div>
+        <ul class="gallery-grid-list">
+            {{ range $page := $sourcePages }}
+            {{ $imageCount := (len $page.Params.Images) }}
+            <li class="gallery-grid-list-item">
+                <div>
+                    <div class="grid-list-item-image-container">
+                        <a href="{{ $page.RelPermalink }}" title="{{ $page.Title }}">
+                            <div class="hover-white-overlay">
+                                <img class="grid-list-item-image" src="{{ $page.Params.ThumbnailImageUrl }}" />
+                            </div>
+                        </a>
+                        
+                        {{ if gt $imageCount 1 }}
+                            {{ partial "gallery/CounterContainer.html" (dict `CounterContainer_ImageCount` $imageCount) }}
+                        {{ end }}
+                    </div>
+                    <div class="grid-list-item-text-container">
+                        <a class="gallery-item-title-link" href="{{ $page.RelPermalink }}" title="{{ $page.Title }}">
+                            {{- $page.Title -}}
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>

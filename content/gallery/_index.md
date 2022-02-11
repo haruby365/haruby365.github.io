@@ -1,5 +1,4 @@
 {
-   "SectionName": "Personal Works",
-   "title": "Personal Works - HARUBY"
+   "SectionOrder": 0,
+   "title": "Gallery"
 }
-# Personal Works

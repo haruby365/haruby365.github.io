@@ -2,15 +2,15 @@
 <title>
     {{- if $.Page.Title -}}
         {{- $.Page.Title -}}
+        {{ print ` - ` }}
     {{- end -}}
-    {{ print ` - ` }}
     {{- $.Site.Title -}}
 </title>
 <meta name="title" content="
     {{- if $.Page.Title -}}
         {{- $.Page.Title -}}
+        {{ print ` - ` }}
     {{- end -}}
-    {{ print ` - ` }}
     {{- $.Site.Title -}}">
 <meta name="description" content="{{- $.Page.Description -}}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,5 +23,6 @@
 <link href="/css/style.css" rel="stylesheet">
 <link href="/css/gallery.css" rel="stylesheet">
 <link href="/css/galleryList.css" rel="stylesheet">
+<script src="/js/script.js"></script>
 <script src="/js/gallery.js"></script>
 <script src="/js/galleryList.js"></script>

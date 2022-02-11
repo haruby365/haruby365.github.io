@@ -4,7 +4,7 @@
    "tags": [
       "Topaz"
    ],
-   "ThumbnailImage": "/artworks/210917_t.jpg",
+   "ThumbnailImageUrl": "/artworks/210917_t.jpg",
    "Images": [
       {
          "Url": "/artworks/210917_ms.jpg"

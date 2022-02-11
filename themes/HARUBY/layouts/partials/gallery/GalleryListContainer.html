@@ -1,0 +1,14 @@
+{{ $rootIndexPage := .GalleryListContainer_RootIndexPage }}
+{{ $childIndexPages := (sort $rootIndexPage.Sections `Params.SectionOrder`) }}
+{{ $childIndexPageCount := len $childIndexPages }}
+<div>
+{{ if gt $childIndexPageCount 0 }}
+    {{ range $childIndexPage := $childIndexPages }}
+    {{ partial "gallery/ViewListTitle.html" (dict "ViewListTitle_SourceIndexPage" $childIndexPage "ViewListTitle_EnableLink" true )}}
+    {{ partial "gallery/GridListContainer.html" (dict "GridListContainer_SourceContentPages" $childIndexPage.Pages.ByDate.Reverse) }}
+    {{ end }}
+{{ else }}
+    {{ partial "gallery/ViewListTitle.html" (dict "ViewListTitle_SourceIndexPage" $rootIndexPage )}}
+    {{ partial "gallery/GridListContainer.html" (dict "GridListContainer_SourceContentPages" $rootIndexPage.Pages.ByDate.Reverse) }}
+{{ end }}
+</div>

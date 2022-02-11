@@ -19,7 +19,7 @@
         <div class="main-content-container">
             <div class="main-text-container">
                 <h2 class="content-title-text">{{- $.Page.Title -}}</h2>
-                <p class="content-date-text">{{- time.Format "January 2, 2006" $.Page.Date -}}</p>
+                <p class="content-date-text">{{- time.Format "2006 January 2" $.Page.Date -}}</p>
                 {{ $.Page.Content }}
                 <div class="main-tags-container">
                     <ul class="horizontal-stack-list">
@@ -88,16 +88,15 @@
                 </div>
             </div>
             <div class="main-category-container">
-                <a class="gray-text-link" href="{{ `/` | relLangURL }}{{ .Type | urlize }}">
-                    {{ $sectionIndexPage := .Site.GetPage (.Type | urlize) }}
-                    <span>View list of {{ print $sectionIndexPage.Params.SectionName }}</span>
+                <a class="gray-text-link" href="{{ .Parent.RelPermalink }}">
+                    <span>View list of {{ print .Parent.Params.SectionName }}</span>
                 </a>
             </div>
             <div id="otherPostsViewport" class="other-posts-viewport">
                 <div class="other-posts-container">
                     {{ $thisPage := . }}
-                    {{ range .Site.Pages.ByDate }}
-                        {{ if and (eq .Kind "page") (eq .Type $thisPage.Type) }}
+                    {{ range .Site.Pages.ByDate.Reverse }}
+                        {{ if and .IsPage (.InSection $thisPage) }}
                             {{ $scratch := newScratch }}
                             {{ $scratch.Set "isSamePage" (eq .File.UniqueID $thisPage.File.UniqueID) }}
                             {{ if ($scratch.Get "isSamePage") }}
@@ -108,27 +107,18 @@
                             <div style="position: relative;">
                                 {{ if ($scratch.Get "isSamePage") }}
                                 <div class="other-post-this-thumbnail-wrapper">
-                                    <img class="other-post-this-thumbnail-image" src="{{ .Params.ThumbnailImage }}" />
+                                    <img class="other-post-this-thumbnail-image" src="{{ .Params.ThumbnailImageUrl }}" />
                                 </div>
                                 {{ else }}
-                                <a class="other-post-link" href="{{ .Permalink }}">
-                                    <div class="other-post-thumbnail-wrapper">
-                                        <img class="other-post-thumbnail-image" src="{{ .Params.ThumbnailImage }}" />
+                                <a class="other-post-link" href="{{ .RelPermalink }}" title="{{ .Title }}" >
+                                    <div class="other-post-thumbnail-wrapper hover-white-overlay">
+                                        <img class="other-post-thumbnail-image" src="{{ .Params.ThumbnailImageUrl }}" />
                                     </div>
                                 </a>
                                 {{ end }}
                                 
                                 {{ if gt $imageCount 1 }}
-                                <div class="other-post-counter-container">
-                                    <ul class="horizontal-stack-list">
-                                        <li>
-                                            <img class="other-post-counter-image" src="/uiIcons/image.svg" />
-                                        </li>
-                                        <li>
-                                            <span class="other-post-counter-text">{{- print $imageCount -}}</span>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    {{ partial "gallery/CounterContainer" (dict "CounterContainer_ImageCount" $imageCount ) }}
                                 {{ end }}
                             </div>
                         </div>

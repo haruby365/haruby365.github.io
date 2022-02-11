@@ -6,8 +6,10 @@
 <body>
     {{ partial "header.html" . }}
     <div class="list-container">
+        {{ partial "Breadscrumb.html" . }}
+        {{ partial "TagsContainer.html" . }}
         <div class="text-content-container">
-            {{ block "main" . }}{{ end }}
+            {{ $.Page.Content }}
         </div>
         {{ partial "ScrollTopButtonContainer.html" . }}
     </div>

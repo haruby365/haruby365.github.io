@@ -1,3 +1,6 @@
+{{ $rootIndexPage := .CurrentSection }}
 <div class="list-container">
+    {{ partial "Breadscrumb.html" . }}
     {{ $.Page.Content }}
+    {{ partial "gallery/GalleryListContainer.html" (dict `GalleryListContainer_RootIndexPage` $rootIndexPage) }}
 </div>

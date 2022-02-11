@@ -17,5 +17,11 @@
    },
    "taxonomies": {
       "tag": "tags"
+   },
+   "params": {   
+      "NaverBlogUrl": "https://blog.naver.com/haruby365",
+      "PixivUrl": "http://pixiv.me/haruby",
+      "ArtstationUrl": "https://www.artstation.com/haruby",
+      "TwitterUrl": "https://twitter.com/haruby365"
    }
 }

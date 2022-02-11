@@ -1,0 +1,11 @@
+{{ $title := .TagButton_Title }}
+{{ $url := .TagButton_Url }}
+{{ $isCancel := .TagButton_IsCancel }}
+<a class="button-link {{ lower $title }}{{ print `-tag-back-color` }}" href="{{ $url }}" title="{{ print `#` }}{{ $title }}">
+    <div style="display: flex; align-items: center; white-space: nowrap;">
+        <span style="display: block; margin: 6px 6px 8px 6px;">{{ print "#" }}{{ $title }}</span>
+        {{ if $isCancel }}
+            <img style="display: block; width: 1em; height: 1em; margin-right: 6px;" src="/uiIcons/xmark_white.svg" />
+        {{ end }}
+    </div>
+</a>

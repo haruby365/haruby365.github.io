@@ -105,7 +105,6 @@
 }
 
 .content-title-text {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     margin: 8px 0;
 }
 
@@ -147,20 +146,6 @@
     display: block;
     position: relative;
 }
-.other-post-thumbnail-wrapper:hover::after {
-    opacity: 0.3;
-}
-.other-post-thumbnail-wrapper::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    opacity: 0;
-    transition: .5s ease;
-}
 
 .other-post-thumbnail-image {
     border-radius: 4px;
@@ -172,7 +157,7 @@
     position: relative;
 }
 .other-post-this-thumbnail-wrapper::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -187,7 +172,7 @@
     height: 136px;
 }
 
-.other-post-counter-container {
+.gallery-item-counter-container {
     display: flex;
     position: absolute;
     top: 4px;
@@ -197,14 +182,14 @@
     border-radius: 12px;
 }
 
-.other-post-counter-image {
+.gallery-item-counter-image {
     display: block;
     width: 0.8em;
     height: 0.8em;
     margin: 3px 0 3px 6px;
 }
 
-.other-post-counter-text {
+.gallery-item-counter-text {
     display: block;
     font-size: 0.8em;
     color: white;

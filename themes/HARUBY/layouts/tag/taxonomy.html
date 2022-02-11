@@ -6,8 +6,11 @@
 <body>
     {{ partial "header.html" . }}
     <div class="list-container">
+        {{ partial "Breadscrumb.html" . }}
+        {{ partial "TagButton.html" (dict "TagButton_Title" .Title "TagButton_Url" .Parent.RelPermalink "TagButton_IsCancel" true )}}
+        {{ partial "gallery/GridListContainer.html" (dict "GridListContainer_SourceContentPages" .Pages.ByDate.Reverse) }}
         <div class="text-content-container">
-            {{ block "main" . }}{{ end }}
+            {{ $.Page.Content }}
         </div>
         {{ partial "ScrollTopButtonContainer.html" . }}
     </div>
