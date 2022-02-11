@@ -93,15 +93,21 @@
                     <span>View list of {{ print $sectionIndexPage.Params.SectionName }}</span>
                 </a>
             </div>
-            <div class="other-posts-viewport">
+            <div id="otherPostsViewport" class="other-posts-viewport">
                 <div class="other-posts-container">
                     {{ $thisPage := . }}
-                    {{ range .Site.Pages }}
+                    {{ range .Site.Pages.ByDate }}
                         {{ if and (eq .Kind "page") (eq .Type $thisPage.Type) }}
+                            {{ $scratch := newScratch }}
+                            {{ $scratch.Set "isSamePage" (eq .File.UniqueID $thisPage.File.UniqueID) }}
+                            {{ if ($scratch.Get "isSamePage") }}
+                        <div id="thisPostInPostsElement" class="other-posts-item-container">
+                            {{ else }}
                         <div class="other-posts-item-container">
+                            {{ end }}
                             <div style="position: relative;">
-                                {{ if eq .File.UniqueID $thisPage.File.UniqueID }}
-                                <div id="thisPostInPostsElement" class="other-post-this-thumbnail-wrapper">
+                                {{ if ($scratch.Get "isSamePage") }}
+                                <div class="other-post-this-thumbnail-wrapper">
                                     <img class="other-post-this-thumbnail-image" src="{{ .Params.ThumbnailImage }}" />
                                 </div>
                                 {{ else }}

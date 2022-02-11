@@ -7,32 +7,50 @@
             "label": "Clean",
             "type": "shell",
             "command": "rmdir",
-            "args": ["-r", "public"],
+            "args": [
+                "-r",
+                "public"
+            ]
         },
         {
             "label": "CreateFolder",
-            "dependsOn": ["Clean"],
+            "dependsOn": [
+                "Clean"
+            ],
             "type": "shell",
             "command": "mkdir",
-            "args": ["public"],
+            "args": [
+                "public"
+            ]
         },
         {
             "label": "Generate",
-            "dependsOn": ["CreateFolder"],
+            "dependsOn": [
+                "CreateFolder"
+            ],
             "type": "shell",
             "command": "../../Hugo/hugo.exe",
-            "args": ["--minify"]
+            "args": [
+                "--minify"
+            ],
+            "problemMatcher": []
         },
         {
             "label": "Server",
-            "dependsOn": ["Generate"],
+            "dependsOn": [
+                "Generate"
+            ],
             "type": "shell",
             "command": "../../Hugo/hugo.exe",
-            "args": ["server", "-p", "1313"],
+            "args": [
+                "server",
+                "-p",
+                "1313"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
-        },
+        }
     ]
 }

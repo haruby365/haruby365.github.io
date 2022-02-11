@@ -1,25 +1,4 @@
-<meta charset="utf-8" />
-<title>
-    {{- if $.Page.Title -}}
-        {{- $.Page.Title -}}
-    {{- end -}}
-    {{ print ` - ` }}
-    {{- $.Site.Title -}}
-</title>
-<meta name="title" content="
-    {{- if $.Page.Title -}}
-        {{- $.Page.Title -}}
-    {{- end -}}
-    {{ print ` - ` }}
-    {{- $.Site.Title -}}">
-<meta name="description" content="{{- $.Page.Description -}}">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/x-icon" href="/favicon.ico" media="(prefers-color-scheme: no-preference)">
-<link rel="icon" type="image/x-icon" href="/favicon_dark.ico"  media="(prefers-color-scheme: dark)">
-<link rel="icon" type="image/x-icon" href="/favicon.ico" media="(prefers-color-scheme: light)">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script>
+{
     var currentImageInfo = null;
 
     function showImageViewer(imageInfo) {
@@ -49,8 +28,8 @@
             mainImage.scrollIntoView();
         }
     }
-</script>
-<script>
+}
+{
     var imageNumberText = null;
     var imageElements = null;
 
@@ -86,15 +65,13 @@
         updateImageNumberText();
 
         var thisPostInPostsElement = document.getElementById("thisPostInPostsElement");
-        if (thisPostInPostsElement !== null) {
-            thisPostInPostsElement.scrollIntoView();
+        var otherPostsViewport = document.getElementById("otherPostsViewport");
+        if (thisPostInPostsElement !== null && otherPostsViewport !== null) {
+            var x = thisPostInPostsElement.offsetLeft;
+            otherPostsViewport.scrollLeft = x;
         }
     });
     window.addEventListener("scroll", function(event) {
         updateImageNumberText();
     });
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
-<link href="/css/style.css" rel="stylesheet">
-<link href="/css/artworksSingle.css" rel="stylesheet">
-<link href="/css/artworksList.css" rel="stylesheet">
+}

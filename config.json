@@ -12,6 +12,9 @@
          }
       }
    },
+   "permalinks": {
+      "gallery": "/:filename/"
+   },
    "taxonomies": {
       "tag": "tags"
    }
