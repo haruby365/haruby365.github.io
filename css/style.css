@@ -1,16 +1,21 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: win-bug-omega, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background: white;
+    color: rgb(29, 29, 31);
+    margin: 0;
+}
+
+.center-table-container {
     display: table;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
-    background: white;
-    color: rgb(29, 29, 31);
 }
 
-h1, h2, h3 {
-    font-family: "Lexend Mega", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+h1 {
+    font-family: "Lexend Mega", win-bug-omega, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 2.2em;
     text-align: center;
 }
 
@@ -39,6 +44,19 @@ a:active {
 a:disabled {
     opacity: 0.32;
 }
+
+.full-screen-display {
+    z-index: 99;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.zoom-in-cursor { cursor: zoom-in; }
+.zoom-out-cursor { cursor: zoom-out; }
 
 blockquote {
     width: fit-content;
@@ -76,6 +94,226 @@ blockquote:after {
     text-align: center;
 }
 
+.text-link {
+    color: rgb(29, 29, 31);
+    letter-spacing: inherit;
+}
+.text-link:link,
+.text-link:visited,
+.text-link:hover,
+.text-link:active {
+    text-decoration: none;
+}
+.text-link:disabled {
+    opacity: 0.32;
+}
+
+.gray-text-link {
+    color: rgb(173, 173, 175);
+    fill: rgb(173, 173, 175);
+    letter-spacing: inherit;
+}
+.gray-text-link:link,
+.gray-text-link:visited,
+.gray-text-link:hover,
+.gray-text-link:active {
+    text-decoration: none;
+}
+.gray-text-link:hover {
+    color: rgb(29, 29, 31);
+    fill: rgb(29, 29, 31);
+}
+.gray-text-link:disabled {
+    opacity: 0.32;
+}
+
+.button-link {
+    position: relative;
+    color: rgb(238, 238, 240);
+    letter-spacing: inherit;
+    background-color: black;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+}
+.button-link:link,
+.button-link:visited,
+.button-link:hover,
+.button-link:active {
+    text-decoration: none;
+}
+.button-link:hover::after {
+    opacity: 0.3;
+}
+.button-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: 0;
+    transition: .5s ease;
+}
+.button-link:disabled {
+    opacity: 0.32;
+}
+
+.naver-back-color {
+    background-color: #42d31a;
+}
+.pixiv-back-color {
+    background-color: #0096fa;
+}
+.artstation-back-color {
+    background-color: #13aff0;
+}
+.twitter-back-color {
+    background-color: #1D9BF0;
+}
+
+.horizontal-stack-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-stack-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.social-button-icon {
+    display: block;
+    margin: 8px 4px 8px 8px;
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.social-button-text {
+    display: block;
+    margin: 8px 8px 10px 4px;
+    font-size: 0.8em;
+    color: white;
+}
+
+.disable-hittest {
+    pointer-events: none;
+}
+
+.hover-white-overlay:hover::after {
+    opacity: 0.3;
+}
+.hover-white-overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.scroll-top-button-container {
+    position: fixed;
+    z-index: 1;
+    right: 28px;
+    bottom: 34px;
+    margin: -5px 0px;
+    padding: 0px;
+}
+
+.scroll-top-button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.32);
+    transition: opacity 0.3s ease 0s;
+}
+
+.scroll-top-button:disabled {
+    cursor: default;
+    opacity: 0.32;
+}
+
+.text-content-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tag-back-color0 {
+    background-color: hsl(4, 36%, 50%);
+}
+.tag-back-color1 {
+    background-color: hsl(340, 36%, 56%);
+}
+.tag-back-color2 {
+    background-color: hsl(291, 32%, 46%);
+}
+.tag-back-color3 {
+    background-color: hsl(262, 32%, 51%);
+}
+.tag-back-color4 {
+    background-color: hsl(231, 36%, 53%);
+}
+.tag-back-color5 {
+    background-color: hsl(207, 40%, 58%);
+}
+.tag-back-color6 {
+    background-color: hsl(187, 40%, 56%);
+}
+.tag-back-color7 {
+    background-color: hsl(174, 40%, 43%);
+}
+.tag-back-color8 {
+    background-color: hsl(122, 29%, 53%);
+}
+.tag-back-color9 {
+    background-color: hsl(88, 40%, 60%);
+}
+.tag-back-color10 {
+    background-color: hsl(54, 30%, 55%);
+}
+.tag-back-color11 {
+    background-color: hsl(54, 60%, 50%);
+}
+.tag-back-color12 {
+    background-color: hsl(36, 50%, 54%);
+}
+.tag-back-color13 {
+    background-color: hsl(14, 40%, 61%);
+}
+.tag-back-color14 {
+    background-color: hsl(200, 18%, 50%);
+}
+.tag-back-color15 {
+    background-color: hsl(16, 25%, 42%);
+}
+
+.amethyst-tag-back-color {
+    background-color: hsl(291, 32%, 46%);
+}
+
+.sapphire-tag-back-color {
+    background-color: hsl(231, 36%, 53%);
+}
+
+.topaz-tag-back-color {
+    background-color: hsl(54, 60%, 50%);
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: rgb(39, 39, 41);
@@ -84,5 +322,21 @@ blockquote:after {
 
     a {
         color: rgb(41, 151, 255);
+    }
+    
+    .text-link {
+        color: rgb(238, 238, 240);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .text-content-container {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .text-content-container {
+        width: 800px;
     }
 }

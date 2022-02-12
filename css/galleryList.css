@@ -1,0 +1,73 @@
+.list-container {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+.gallery-item-title-link {
+    display: inline;
+    max-width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    color: rgb(29, 29, 31);
+}
+.gallery-item-title-link:link,
+.gallery-item-title-link:visited,
+.gallery-item-title-link:hover,
+.gallery-item-title-link:active {
+    text-decoration: none;
+}
+.gallery-item-title-link:visited {
+    color: rgb(173, 173, 175);
+}
+.gallery-item-title-link:disabled {
+    opacity: 0.32;
+}
+
+.gallery-grid-list-viewport {
+    max-height: 2120px;
+    overflow-y: auto;
+}
+
+.gallery-grid-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.gallery-grid-list-item {
+    width: 184px;
+    margin: 12px;
+}
+
+.grid-list-item-image-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-list-item-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.grid-list-item-text-container {
+    display: flex;
+    margin-top: 4px;
+}
+
+@media screen and (min-width: 700px) {
+    .list-container {
+        width: 650px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .list-container {
+        width: 1050px;
+    }
+}
