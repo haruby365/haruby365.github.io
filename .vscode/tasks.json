@@ -53,7 +53,7 @@
             }
         },
         {
-            "label": "Gallery - Genenate File Name",
+            "label": "Gallery - Filename",
             "type": "shell",
             "command": "dotnet",
             "args": [
