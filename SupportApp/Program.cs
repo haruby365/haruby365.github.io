@@ -28,6 +28,10 @@ public static class Program
             }
             GenerateGalleryFilename(args[1]);
         }
+        if (string.Equals(command, "gallery-generate-new", StringComparison.OrdinalIgnoreCase))
+        {
+            GenerateNewGallery();
+        }
         else
         {
             Console.WriteLine($"'{command}' is unknown command.");
@@ -45,9 +49,25 @@ public static class Program
             Ext = ext;
         }
     }
+
+    static void GenerateNewGallery()
+    {
+        string targetPath = Path.Combine(Environment.CurrentDirectory, ContentDirectoryName, GalleryDirectoryName, "_New.md");
+
+        GalleryFrontMatter frontMatter = GalleryFrontMatter.Empty;
+        string json = Serialize(frontMatter);
+        File.WriteAllText(targetPath, json);
+
+        string targetStaticPath = Path.Combine(Environment.CurrentDirectory, StaticDirectoryName, GalleryDirectoryName, "_New");
+        Directory.CreateDirectory(targetStaticPath);
+    }
+
     static void GenerateGalleryFilename(string filePath)
     {
         const int Length = 12;
+        const char FillChar = '1';
+        const string ThumbnailFilename = "t";
+        const string ImageFilenamePrefix = "p";
 
         string content = File.ReadAllText(filePath);
         string dir = Path.GetDirectoryName(filePath) ?? string.Empty;
@@ -62,8 +82,13 @@ public static class Program
             return;
         }
         TimeSpan offset = frontMatter.Date - DateTime.MinValue;
-        double msec = offset.TotalMinutes;
-        string slug = msec.ToString(new string('0', Length));
+        long msec = (long)offset.TotalMinutes;
+        StringBuilder builder = new(msec.ToString("0"));
+        while (builder.Length < Length)
+        {
+            builder.Insert(0, FillChar);
+        }
+        string slug = builder.ToString();
         Console.WriteLine(slug);
 
         if (filename == slug)
@@ -75,8 +100,8 @@ public static class Program
         string targetPath = Path.Combine(dir, slug + ext);
         File.Move(filePath, targetPath);
         
-        string sourceStaticDirPath = Path.Combine(Environment.CurrentDirectory, "static", "gallery", filename);
-        string targetStaticDirPath = Path.Combine(Environment.CurrentDirectory, "static", "gallery", slug);
+        string sourceStaticDirPath = Path.Combine(Environment.CurrentDirectory, StaticDirectoryName, GalleryDirectoryName, filename);
+        string targetStaticDirPath = Path.Combine(Environment.CurrentDirectory, StaticDirectoryName, GalleryDirectoryName, slug);
         List<NameExtPair> staticFilenames = new();
         foreach (var file in Directory.GetFiles(sourceStaticDirPath))
         {
@@ -86,24 +111,24 @@ public static class Program
         Directory.Delete(sourceStaticDirPath);
         staticFilenames.Sort((l, r) => l.Name.CompareTo(r.Name));
         
-        NameExtPair? thumbnailFilePairN = staticFilenames.FirstOrDefault(pair => string.Equals(pair.Name, "t", StringComparison.OrdinalIgnoreCase));
+        NameExtPair? thumbnailFilePairN = staticFilenames.FirstOrDefault(pair => string.Equals(pair.Name, ThumbnailFilename, StringComparison.OrdinalIgnoreCase));
         if (thumbnailFilePairN.HasValue)
         {
             NameExtPair p = thumbnailFilePairN.Value;
-            frontMatter.ThumbnailImageUrl = $"/gallery/{slug}/{p.Name}{p.Ext}";
+            frontMatter.ThumbnailImageUrl = $"/{GalleryDirectoryName}/{slug}/{p.Name}{p.Ext}";
         }
         
         List<GalleryFrontMatterImage> images = new();
         frontMatter.Images = images;
         foreach (var p in staticFilenames)
         {
-            if (char.ToLower(p.Name[0]) != 'p')
+            if (!p.Name.ToLower().StartsWith(ImageFilenamePrefix))
             {
                 continue;
             }
             images.Add(new GalleryFrontMatterImage()
             {
-                Url = $"/gallery/{slug}/{p.Name}{p.Ext}",
+                Url = $"/{GalleryDirectoryName}/{slug}/{p.Name}{p.Ext}",
             });
         }
 
@@ -140,4 +165,8 @@ public static class Program
 
         return sw.ToString();
     }
+    
+    const string ContentDirectoryName = "content";
+    const string StaticDirectoryName = "static";
+    const string GalleryDirectoryName = "gallery";
 }

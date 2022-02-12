@@ -65,6 +65,19 @@
                 "${file}"
             ],
             "problemMatcher": []
+        },
+        {
+            "label": "Gallery - New",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "SupportApp/SupportApp.csproj",
+                "--",
+                "gallery-generate-new"
+            ],
+            "problemMatcher": []
         }
     ]
 }
