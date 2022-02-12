@@ -39,7 +39,7 @@
 }
 
 .gallery-grid-list-item {
-    width: calc(50% - 20px);
+    width: calc(50% - 26px);
     margin: 12px;
 }
 
@@ -60,9 +60,29 @@
     margin-top: 4px;
 }
 
+@media screen and (min-width: 500px) {
+    .list-container {
+        width: 430px;
+    }
+    .gallery-grid-list-item {
+        width: 184px;
+        margin: 12px;
+    }
+}
+
 @media screen and (min-width: 700px) {
     .list-container {
-        width: 650px;
+        width: 630px;
+    }
+    .gallery-grid-list-item {
+        width: 184px;
+        margin: 12px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .list-container {
+        width: 850px;
     }
     .gallery-grid-list-item {
         width: 184px;
