@@ -51,6 +51,20 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Gallery - Genenate File Name",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "SupportApp/SupportApp.csproj",
+                "--",
+                "gallery-generate-filename",
+                "${file}"
+            ],
+            "problemMatcher": []
         }
     ]
 }
