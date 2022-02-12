@@ -67,7 +67,13 @@
         var thisPostInPostsElement = document.getElementById("thisPostInPostsElement");
         var otherPostsViewport = document.getElementById("otherPostsViewport");
         if (thisPostInPostsElement !== null && otherPostsViewport !== null) {
-            var x = thisPostInPostsElement.offsetLeft;
+            var viewportRect = otherPostsViewport.getBoundingClientRect();
+            var itemRect = thisPostInPostsElement.getBoundingClientRect();
+
+            var viewportHalfWidth = viewportRect.width * 0.5;
+            var itemHalfWidth = itemRect.width * 0.5;
+
+            var x = thisPostInPostsElement.offsetLeft - viewportHalfWidth + itemHalfWidth;
             otherPostsViewport.scrollLeft = x;
         }
     });
