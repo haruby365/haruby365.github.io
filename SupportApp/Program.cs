@@ -165,6 +165,19 @@ public static class Program
 
         return sw.ToString();
     }
+
+    static void PrintCodeTable()
+    {
+        for (int i = 0; i < byte.MaxValue; i++)
+        {
+            char c = (char)i;
+            if (!char.IsLetterOrDigit(c) && !char.IsSymbol(c) && c == '`')
+            {
+                continue;
+            }
+            Console.WriteLine($"{{{{ $codeTable.Set `{c}` {i} }}}}");
+        }
+    }
     
     const string ContentDirectoryName = "content";
     const string StaticDirectoryName = "static";

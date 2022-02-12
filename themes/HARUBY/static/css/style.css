@@ -1,5 +1,5 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: win-bug-omega, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     background: white;
     color: rgb(29, 29, 31);
     margin: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    font-family: "Lexend Mega", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: "Lexend Mega", win-bug-omega, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 2.2em;
     text-align: center;
 }
@@ -251,6 +251,67 @@ blockquote:after {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.tag-back-color0 {
+    background-color: hsl(4, 36%, 50%);
+}
+.tag-back-color1 {
+    background-color: hsl(340, 36%, 56%);
+}
+.tag-back-color2 {
+    background-color: hsl(291, 32%, 46%);
+}
+.tag-back-color3 {
+    background-color: hsl(262, 32%, 51%);
+}
+.tag-back-color4 {
+    background-color: hsl(231, 36%, 53%);
+}
+.tag-back-color5 {
+    background-color: hsl(207, 40%, 58%);
+}
+.tag-back-color6 {
+    background-color: hsl(187, 40%, 56%);
+}
+.tag-back-color7 {
+    background-color: hsl(174, 40%, 43%);
+}
+.tag-back-color8 {
+    background-color: hsl(122, 29%, 53%);
+}
+.tag-back-color9 {
+    background-color: hsl(88, 40%, 60%);
+}
+.tag-back-color10 {
+    background-color: hsl(54, 30%, 55%);
+}
+.tag-back-color11 {
+    background-color: hsl(54, 60%, 50%);
+}
+.tag-back-color12 {
+    background-color: hsl(36, 50%, 54%);
+}
+.tag-back-color13 {
+    background-color: hsl(14, 40%, 61%);
+}
+.tag-back-color14 {
+    background-color: hsl(200, 18%, 50%);
+}
+.tag-back-color15 {
+    background-color: hsl(16, 25%, 42%);
+}
+
+.amethyst-tag-back-color {
+    background-color: hsl(291, 32%, 46%);
+}
+
+.sapphire-tag-back-color {
+    background-color: hsl(231, 36%, 53%);
+}
+
+.topaz-tag-back-color {
+    background-color: hsl(54, 60%, 50%);
 }
 
 @media (prefers-color-scheme: dark) {
