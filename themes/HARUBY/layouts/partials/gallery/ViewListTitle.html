@@ -2,13 +2,13 @@
 {{ $enableLink := .ViewListTitle_EnableLink }}
 <div style="display: flex; align-items: baseline; white-space: nowrap;">
     {{ if $enableLink }}
-    <a class="text-link" style="margin: 12px 0;" href="{{ $sourceIndexPage.RelPermalink }}">
-        <h2>{{ $sourceIndexPage.Params.Title }}</h2>
+    <a class="text-link" style="margin: 12px 0 0 0;" href="{{ $sourceIndexPage.RelPermalink }}">
+        <h2 style="margin: 0;">{{ $sourceIndexPage.Params.Title }}</h2>
     </a>
-    <a class="gray-text-link" style="margin: 12px 8px;" href="{{ $sourceIndexPage.RelPermalink }}">
-        <span>View →</span>
+    <a class="gray-text-link" style="margin: 12px 0 0 8px;" href="{{ $sourceIndexPage.RelPermalink }}">
+        <span style="margin: 0;">View →</span>
     </a>
     {{ else }}
-    <h2 style="margin: 12px 0;">{{ $sourceIndexPage.Params.Title }}</h2>
+    <h2 style="margin: 12px 0 0 0;">{{ $sourceIndexPage.Params.Title }}</h2>
     {{ end }}
 </div>
