@@ -13,7 +13,7 @@
       }
    },
    "permalinks": {
-      "gallery": "/:filename/"
+      "gallery": "/:slug/"
    },
    "taxonomies": {
       "tag": "tags"
@@ -22,6 +22,7 @@
       "NaverBlogUrl": "https://blog.naver.com/haruby365",
       "PixivUrl": "http://pixiv.me/haruby",
       "ArtstationUrl": "https://www.artstation.com/haruby",
-      "TwitterUrl": "https://twitter.com/haruby365"
+      "TwitterUrl": "https://twitter.com/haruby365",
+      "GitHubUrl": "https://github.com/haruby365"
    }
 }

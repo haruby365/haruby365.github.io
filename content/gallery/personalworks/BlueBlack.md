@@ -4,6 +4,7 @@
    "tags": [
       "Amethyst"
    ],
+   "slug": "111062921600",
    "ThumbnailImageUrl": "/gallery/111062921600/t.jpg",
    "Images": [
       {

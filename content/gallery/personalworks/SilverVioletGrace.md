@@ -4,6 +4,7 @@
    "tags": [
       "Sapphire"
    ],
+   "slug": "111062989280",
    "ThumbnailImageUrl": "/gallery/111062989280/t.jpg",
    "Images": [
       {

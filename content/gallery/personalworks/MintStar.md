@@ -4,6 +4,7 @@
    "tags": [
       "Topaz"
    ],
+   "slug": "111062878400",
    "ThumbnailImageUrl": "/gallery/111062878400/t.jpg",
    "Images": [
       {
