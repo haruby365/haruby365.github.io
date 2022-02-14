@@ -70,15 +70,15 @@ public static class Program
         Console.WriteLine("Usage:");
         Console.WriteLine("    1. Edit 'date' field in the 'MarkdownFile'.");
         Console.WriteLine("        * Maybe also want to set 'title', 'tags' and social URLs.");
-        Console.WriteLine("        * Must not to tough 'slug', 'ThumbnailImageUrl', 'Images'.");
+        Console.WriteLine("        * Must not to touch 'slug', 'ThumbnailImageUrl', 'Images'.");
         Console.WriteLine("    2. Copy/paste image files to the 'StaticDir'.");
         Console.WriteLine($"    3. Edit thumbnail image filename to '{ThumbnailFilename}'.");
-        Console.WriteLine($"        e.g. t.png, t.jpg etc.");
+        Console.WriteLine($"        e.g. {ThumbnailFilename}.png, {ThumbnailFilename}.jpg etc.");
         Console.WriteLine($"    4. Edit image filenames to starts with '{ImageFilenamePrefix}'.");
-        Console.WriteLine($"       e.g. p.jpg, p0.jpg, p1.jpg etc.");
+        Console.WriteLine($"       e.g. {ImageFilenamePrefix}.jpg, {ImageFilenamePrefix}0.jpg, {ImageFilenamePrefix}1.jpg etc.");
         Console.WriteLine("        * The images will be sorted by their filenames.");
         Console.WriteLine("    5. Execute 'gallery-generate-slug' command with the 'MarkdownFile' path.");
-        Console.WriteLine("    * Don't forget to set \"gallery\": \"/:slug/\" at 'permalinks' in the config.json for Hugo.");
+        Console.WriteLine("    * Don't forget to set \"gallery\": \"/:slug/\" at 'permalinks' in the 'config.json' for Hugo.");
     }
 
     static void GenerateGalleryFilename(string filePath)
