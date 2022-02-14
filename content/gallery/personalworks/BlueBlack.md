@@ -12,7 +12,7 @@
       }
    ],
    "NaverBlogUrl": "https://blog.naver.com/haruby365/222597745965",
-   "PixivUrl": "",
-   "ArtstationUrl": "",
-   "TwitterUrl": ""
+   "PixivUrl": "https://www.pixiv.net/artworks/96261217",
+   "ArtstationUrl": "https://www.artstation.com/artwork/LemNOl",
+   "TwitterUrl": "https://twitter.com/haruby365/status/1493239235834376192?s=20&t=r61zo-KNk9jO_Z0JhfqevA"
 }
