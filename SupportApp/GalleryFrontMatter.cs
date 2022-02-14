@@ -14,6 +14,7 @@ public struct GalleryFrontMatter
     {
         Title = string.Empty,
         Tags = Array.Empty<string>(),
+        Slug = string.Empty,
         ThumbnailImageUrl = string.Empty,
         Images = Array.Empty<GalleryFrontMatterImage>(),
         NaverBlogUrl = string.Empty,
@@ -28,6 +29,8 @@ public struct GalleryFrontMatter
     public DateTime Date;
     [JsonProperty("tags")]
     public IReadOnlyList<string>? Tags;
+    [JsonProperty("slug")]
+    public string Slug;
     public string ThumbnailImageUrl;
     public IReadOnlyList<GalleryFrontMatterImage>? Images;
     public string NaverBlogUrl;

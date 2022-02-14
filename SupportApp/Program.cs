@@ -19,7 +19,7 @@ public static class Program
 
         Console.WriteLine("Working directory:" + Environment.CurrentDirectory);
 
-        if (string.Equals(command, "gallery-generate-filename", StringComparison.OrdinalIgnoreCase))
+        if (string.Equals(command, "gallery-generate-slug", StringComparison.OrdinalIgnoreCase))
         {
             if (args.Length <= 1)
             {
@@ -50,30 +50,43 @@ public static class Program
         }
     }
 
+    const string NewGalleryName = "_NewGallery";
+    const string ThumbnailFilename = "t";
+    const string ImageFilenamePrefix = "p";
+
     static void GenerateNewGallery()
     {
-        string targetPath = Path.Combine(Environment.CurrentDirectory, ContentDirectoryName, GalleryDirectoryName, "_New.md");
+        string targetPath = Path.Combine(Environment.CurrentDirectory, ContentDirectoryName, GalleryDirectoryName, NewGalleryName + ".md");
 
         GalleryFrontMatter frontMatter = GalleryFrontMatter.Empty;
         string json = Serialize(frontMatter);
         File.WriteAllText(targetPath, json);
 
-        string targetStaticPath = Path.Combine(Environment.CurrentDirectory, StaticDirectoryName, GalleryDirectoryName, "_New");
+        string targetStaticPath = Path.Combine(Environment.CurrentDirectory, StaticDirectoryName, GalleryDirectoryName, NewGalleryName);
         Directory.CreateDirectory(targetStaticPath);
+
+        Console.WriteLine("MarkdownFile: " + targetPath);
+        Console.WriteLine("StaticDir: " + targetStaticPath);
+        Console.WriteLine("Usage:");
+        Console.WriteLine("    1. Edit 'date' field in the 'MarkdownFile'.");
+        Console.WriteLine("        * Maybe also want to set 'title', 'tags' and social URLs.");
+        Console.WriteLine("        * Must not to tough 'slug', 'ThumbnailImageUrl', 'Images'.");
+        Console.WriteLine("    2. Copy/paste image files to the 'StaticDir'.");
+        Console.WriteLine($"    3. Edit thumbnail image filename to '{ThumbnailFilename}'.");
+        Console.WriteLine($"        e.g. t.png, t.jpg etc.");
+        Console.WriteLine($"    4. Edit image filenames to starts with '{ImageFilenamePrefix}'.");
+        Console.WriteLine($"       e.g. p.jpg, p0.jpg, p1.jpg etc.");
+        Console.WriteLine("        * The images will be sorted by their filenames.");
+        Console.WriteLine("    5. Execute 'gallery-generate-slug' command with the 'MarkdownFile' path.");
+        Console.WriteLine("    * Don't forget to set \"gallery\": \"/:slug/\" at 'permalinks' in the config.json for Hugo.");
     }
 
     static void GenerateGalleryFilename(string filePath)
     {
         const int Length = 12;
         const char FillChar = '1';
-        const string ThumbnailFilename = "t";
-        const string ImageFilenamePrefix = "p";
 
         string content = File.ReadAllText(filePath);
-        string dir = Path.GetDirectoryName(filePath) ?? string.Empty;
-        string filename = Path.GetFileNameWithoutExtension(filePath);
-        string ext = Path.GetExtension(filePath);
-
         GalleryFrontMatter frontMatter = GetGalleryFrontMatter(content);
 
         if (frontMatter.Date == default)
@@ -88,27 +101,23 @@ public static class Program
         {
             builder.Insert(0, FillChar);
         }
+
         string slug = builder.ToString();
         Console.WriteLine(slug);
-
-        if (filename == slug)
+        if (frontMatter.Slug == slug)
         {
-            Console.WriteLine("Already filename is set.");
+            Console.WriteLine("Already slug is set.");
             return;
         }
+        frontMatter.Slug = slug;
 
-        string targetPath = Path.Combine(dir, slug + ext);
-        File.Move(filePath, targetPath);
-        
-        string sourceStaticDirPath = Path.Combine(Environment.CurrentDirectory, StaticDirectoryName, GalleryDirectoryName, filename);
+        string sourceStaticDirPath = Path.Combine(Environment.CurrentDirectory, StaticDirectoryName, GalleryDirectoryName, NewGalleryName);
         string targetStaticDirPath = Path.Combine(Environment.CurrentDirectory, StaticDirectoryName, GalleryDirectoryName, slug);
+        Directory.Move(sourceStaticDirPath, targetStaticDirPath);
+        string[] files = Directory.GetFiles(targetStaticDirPath);
         List<NameExtPair> staticFilenames = new();
-        foreach (var file in Directory.GetFiles(sourceStaticDirPath))
-        {
-            MoveFileTo(file, slug);
-            staticFilenames.Add(new NameExtPair(Path.GetFileNameWithoutExtension(file), Path.GetExtension(file)));
-        }
-        Directory.Delete(sourceStaticDirPath);
+        staticFilenames.AddRange(from file in files
+                                 select new NameExtPair(Path.GetFileNameWithoutExtension(file), Path.GetExtension(file)));
         staticFilenames.Sort((l, r) => l.Name.CompareTo(r.Name));
         
         NameExtPair? thumbnailFilePairN = staticFilenames.FirstOrDefault(pair => string.Equals(pair.Name, ThumbnailFilename, StringComparison.OrdinalIgnoreCase));
@@ -133,7 +142,7 @@ public static class Program
         }
 
         string json = Serialize(frontMatter);
-        File.WriteAllText(targetPath, json);
+        File.WriteAllText(filePath, json);
     }
 
     static string MoveFileTo(string filePath, string anotherDirectoryName)

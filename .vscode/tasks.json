@@ -53,7 +53,7 @@
             }
         },
         {
-            "label": "Gallery - Filename",
+            "label": "Gallery - Slug",
             "type": "shell",
             "command": "dotnet",
             "args": [
@@ -61,7 +61,7 @@
                 "--project",
                 "SupportApp/SupportApp.csproj",
                 "--",
-                "gallery-generate-filename",
+                "gallery-generate-slug",
                 "${file}"
             ],
             "problemMatcher": []
