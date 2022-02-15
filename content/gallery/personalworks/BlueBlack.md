@@ -12,7 +12,7 @@
       }
    ],
    "NaverBlogUrl": "https://blog.naver.com/haruby365/222597745965",
-   "PixivUrl": "",
-   "ArtstationUrl": "",
+   "PixivUrl": "https://www.pixiv.net/artworks/96286831",
+   "ArtstationUrl": "https://www.artstation.com/artwork/X1G5wn",
    "TwitterUrl": "https://twitter.com/haruby365/status/1493239235834376192?s=20&t=r61zo-KNk9jO_Z0JhfqevA"
 }
