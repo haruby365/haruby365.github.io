@@ -117,8 +117,9 @@
                                 </a>
                                 {{ end }}
                                 
-                                {{ if gt $imageCount 1 }}
-                                    {{ partial "gallery/CounterContainer" (dict "CounterContainer_ImageCount" $imageCount ) }}
+                                {{ $otherImageCount := (len .Params.Images) }}
+                                {{ if gt $otherImageCount 1 }}
+                                    {{ partial "gallery/CounterContainer" (dict "CounterContainer_ImageCount" $otherImageCount ) }}
                                 {{ end }}
                             </div>
                         </div>
