@@ -70,7 +70,7 @@ public static class Program
         Console.WriteLine("Usage:");
         Console.WriteLine("    1. Edit 'date' field in the 'MarkdownFile'.");
         Console.WriteLine("        * Maybe also want to set 'title', 'tags' and social URLs.");
-        Console.WriteLine("        * Must not to touch 'slug', 'ThumbnailImageUrl', 'Images'.");
+        Console.WriteLine("        * Must not touch 'slug', 'ThumbnailImageUrl', 'Images'.");
         Console.WriteLine("    2. Copy/paste image files to the 'StaticDir'.");
         Console.WriteLine($"    3. Edit thumbnail image filename to '{ThumbnailFilename}'.");
         Console.WriteLine($"        e.g. {ThumbnailFilename}.png, {ThumbnailFilename}.jpg etc.");
@@ -131,7 +131,7 @@ public static class Program
         frontMatter.Images = images;
         foreach (var p in staticFilenames)
         {
-            if (!p.Name.ToLower().StartsWith(ImageFilenamePrefix))
+            if (!p.Name.StartsWith(ImageFilenamePrefix, StringComparison.OrdinalIgnoreCase))
             {
                 continue;
             }
@@ -143,18 +143,6 @@ public static class Program
 
         string json = Serialize(frontMatter);
         File.WriteAllText(filePath, json);
-    }
-
-    static string MoveFileTo(string filePath, string anotherDirectoryName)
-    {
-        string filename = Path.GetFileName(filePath);
-        string dir = Path.GetDirectoryName(filePath) ?? string.Empty;
-        string parentDir = Path.GetDirectoryName(dir) ?? string.Empty;
-        string targetDir = Path.Combine(parentDir, anotherDirectoryName);
-        Directory.CreateDirectory(targetDir);
-        string targetPath = Path.Combine(targetDir, filename);
-        File.Move(filePath, targetPath);
-        return targetPath;
     }
 
     static GalleryFrontMatter GetGalleryFrontMatter(string source)
@@ -173,19 +161,6 @@ public static class Program
         serializer.Serialize(jw, frontMatter);
 
         return sw.ToString();
-    }
-
-    static void PrintCodeTable()
-    {
-        for (int i = 0; i < byte.MaxValue; i++)
-        {
-            char c = (char)i;
-            if (!char.IsLetterOrDigit(c) && !char.IsSymbol(c) && c == '`')
-            {
-                continue;
-            }
-            Console.WriteLine($"{{{{ $codeTable.Set `{c}` {i} }}}}");
-        }
     }
     
     const string ContentDirectoryName = "content";
