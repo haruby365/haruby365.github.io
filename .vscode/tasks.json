@@ -3,6 +3,7 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
+        // Hugo Tasks
         {
             "label": "Clean",
             "type": "shell",
@@ -52,15 +53,13 @@
                 "isDefault": true
             }
         },
+
+        // Gallery Tasks
         {
             "label": "Gallery - Slug",
             "type": "shell",
-            "command": "dotnet",
+            "command": "${workspaceFolder}/SupportApp/publish/SupportApp.exe",
             "args": [
-                "run",
-                "--project",
-                "SupportApp/SupportApp.csproj",
-                "--",
                 "gallery-generate-slug",
                 "${file}"
             ],
@@ -69,15 +68,51 @@
         {
             "label": "Gallery - New",
             "type": "shell",
-            "command": "dotnet",
+            "command": "${workspaceFolder}/SupportApp/publish/SupportApp.exe",
             "args": [
-                "run",
-                "--project",
-                "SupportApp/SupportApp.csproj",
-                "--",
                 "gallery-generate-new"
             ],
             "problemMatcher": []
+        },
+        
+        // Support App Tasks
+        {
+            "label": "SupportApp - build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/SupportApp/SupportApp.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "SupportApp - publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/SupportApp/SupportApp.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "-o",
+                "${workspaceFolder}/SupportApp/publish/"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "SupportApp - watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/SupportApp/SupportApp.csproj"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }
