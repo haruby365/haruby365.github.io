@@ -27,4 +27,4 @@
       * Character design and illustration.
       * Character animation application.
 
-   <p class="post-comment">Updated in January 2022</p>
+   <p class="post-comment">Updated in 2022 January</p>
