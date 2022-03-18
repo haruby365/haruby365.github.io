@@ -310,6 +310,10 @@ blockquote:after {
     background-color: hsl(231, 36%, 53%);
 }
 
+.emerald-tag-back-color {
+    background-color: hsl(122, 29%, 53%);
+}
+
 .topaz-tag-back-color {
     background-color: hsl(54, 60%, 50%);
 }
