@@ -57,6 +57,7 @@
 }
 
 .main-image-number-wrapper span {
+    font-weight: 300;
     font-size: small;
     margin: 4px 6px;
 }
@@ -191,6 +192,7 @@
 
 .gallery-item-counter-text {
     display: block;
+    font-weight: 300;
     font-size: 0.8em;
     color: white;
     margin: 3px 6px 3px 3px;
