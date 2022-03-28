@@ -10,7 +10,7 @@
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-weight: bold;
+    font-weight: 500;
     color: rgb(29, 29, 31);
 }
 .gallery-item-title-link:link,

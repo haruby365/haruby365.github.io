@@ -18,7 +18,7 @@
 
 <a class="button-link {{ `tag-back-color` }}{{ $itemIndex }} {{ lower $title }}{{ print `-tag-back-color` }}" href="{{ $url }}" title="{{ print `#` }}{{ $title }}">
     <div style="display: flex; align-items: center; white-space: nowrap;">
-        <span style="display: block; margin: 6px 6px 8px 6px; color: white; font-weight: 500;">{{ print "#" }}{{ $title }}</span>
+        <span style="display: block; margin: 8px; color: white; font-weight: 300;">{{ print "#" }}{{ $title }}</span>
         {{ if $isCancel }}
             <img style="display: block; width: 1em; height: 1em; margin-right: 6px;" src="/uiIcons/xmark_white.svg" />
         {{ end }}
