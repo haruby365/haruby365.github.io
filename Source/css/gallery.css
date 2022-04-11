@@ -1,0 +1,244 @@
+.page-content-container {
+    background-color: #f5f5f6;
+    min-width: 100%;
+    padding-top: 24px;
+    padding-bottom: 56px;
+}
+
+.post-container {
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-image-container {
+    position: relative;
+    height: auto;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #fafafb;
+}
+
+.main-image-wrapper {
+    min-width: 200px;
+}
+
+.main-image {
+    display: block;
+    max-width: calc(100% - 40px);
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-image-padding {
+    padding-top: 40px;
+    margin: 0;
+}
+
+.main-image-number-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.main-image-number-wrapper {
+    position: sticky;
+    top: 10px;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    margin: 12px;
+}
+
+.main-image-number-wrapper span {
+    font-weight: 300;
+    font-size: small;
+    margin: 4px 6px;
+}
+
+.main-content-container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: white;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.main-text-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.viewer-image-container {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+}
+
+.viewer-image-wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.viewer-image {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.main-tags-container {
+    margin: 16px 0;
+}
+
+.main-tag-text::before {
+    content: "#";
+}
+
+.social-buttons-container {
+    margin: 16px 0;
+}
+
+.content-title-text {
+    margin: 8px 0;
+}
+
+.content-date-text {
+    margin: 0;
+    font-size: small;
+    opacity: 0.7;
+}
+
+.main-category-container {
+    width: 90%;
+    margin: 40px auto 0px auto;
+    font-size: 0.84em;
+}
+
+.other-posts-viewport {
+    position: relative;
+    width: 90%;
+    height: 176px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 12px auto 40px auto;
+}
+
+.other-posts-container {
+    float: left;
+}
+
+.other-posts-item-container {
+    display: table-cell;
+    padding: 16px 4px;
+}
+
+.other-post-link {
+    text-decoration: none;
+}
+
+.other-post-thumbnail-wrapper {
+    display: block;
+    position: relative;
+}
+
+.other-post-thumbnail-image {
+    border-radius: 4px;
+    height: 136px;
+}
+
+.other-post-this-thumbnail-wrapper {
+    display: block;
+    position: relative;
+}
+.other-post-this-thumbnail-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: 0.7;
+}
+
+.other-post-this-thumbnail-image {
+    border-radius: 4px;
+    height: 136px;
+}
+
+.gallery-item-counter-container {
+    display: flex;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 12px;
+}
+
+.gallery-item-counter-image {
+    display: block;
+    width: 0.8em;
+    height: 0.8em;
+    margin: 3px 0 3px 6px;
+}
+
+.gallery-item-counter-text {
+    display: block;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: white;
+    margin: 3px 6px 3px 3px;
+}
+
+@media screen and (min-width: 800px) {
+    .post-container {
+        width: 700px;
+    }
+    .main-image {
+        max-height: 500px;
+    }
+    .main-text-container {
+        width: 600px;
+    }
+    .other-posts-viewport {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .post-container {
+        width: 1000px;
+    }
+    .main-image {
+        max-height: 800px;
+    }
+    .main-text-container {
+        width: 900px;
+    }
+    .other-posts-viewport {
+        width: 900px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: white;
+        color: rgb(29, 29, 31);
+    }
+
+    a {
+        color: rgb(0, 102, 204);
+    }
+    
+    .text-link {
+        color: rgb(29, 29, 31);
+    }
+}
