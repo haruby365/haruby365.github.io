@@ -1,8 +1,0 @@
-<div style="display: inline-flex; vertical-align: top; flex-wrap: wrap;">
-    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-    {{ $tagPage := $.Site.GetPage (printf "/tags/%s" $name) }}
-    <div style="display: flex; margin: 0px 4px 8px 4px;">
-        {{ partial "TagButton.html" (dict "TagButton_Title" $tagPage.Title "TagButton_Url" $tagPage.RelPermalink )}}
-    </div>
-    {{ end }}
-</div>
