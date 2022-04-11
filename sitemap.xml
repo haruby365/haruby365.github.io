@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns:img="http://www.google.com/schemas/sitemap-image/1.1" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://www.haruby.com/</loc>
     <lastmod>2022-04-11</lastmod>
@@ -14,45 +14,97 @@
     <loc>http://www.haruby.com/111063041120/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111063041120/p0.jpg</img:loc>
+      <img:title>Gold and Black</img:title>
+    </img:image>
   </url>
   <url>
     <loc>http://www.haruby.com/111063029600/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111063029600/p0.jpg</img:loc>
+      <img:title>Yellow Beigh</img:title>
+    </img:image>
   </url>
   <url>
     <loc>http://www.haruby.com/111063018080/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111063018080/p0.jpg</img:loc>
+      <img:title>Pink Brown</img:title>
+    </img:image>
   </url>
   <url>
     <loc>http://www.haruby.com/111063009440/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111063009440/p0.jpg</img:loc>
+      <img:title>Deep Blue</img:title>
+    </img:image>
   </url>
   <url>
     <loc>http://www.haruby.com/111062989280/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062989280/p0.jpg</img:loc>
+      <img:title>Silver Violet Grace</img:title>
+    </img:image>
   </url>
   <url>
     <loc>http://www.haruby.com/111062964800/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062964800/p0.jpg</img:loc>
+      <img:title>Pearl Brown</img:title>
+    </img:image>
   </url>
   <url>
     <loc>http://www.haruby.com/111062921600/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062921600/p0.jpg</img:loc>
+      <img:title>Blue Black</img:title>
+    </img:image>
   </url>
   <url>
     <loc>http://www.haruby.com/111062878400/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062878400/p0.jpg</img:loc>
+      <img:title>Mint Star</img:title>
+    </img:image>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062878400/p1.jpg</img:loc>
+      <img:title>Mint Star</img:title>
+    </img:image>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062878400/p2.gif</img:loc>
+      <img:title>Mint Star</img:title>
+    </img:image>
   </url>
   <url>
     <loc>http://www.haruby.com/111062832320/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062832320/p0.jpg</img:loc>
+      <img:title>Black Tea</img:title>
+    </img:image>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062832320/p1.jpg</img:loc>
+      <img:title>Black Tea</img:title>
+    </img:image>
+    <img:image>
+      <img:loc>http://www.haruby.com/111062832320/p2.gif</img:loc>
+      <img:title>Black Tea</img:title>
+    </img:image>
   </url>
 </urlset>
