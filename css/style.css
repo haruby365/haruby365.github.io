@@ -317,6 +317,10 @@ blockquote:after {
     background-color: hsl(231, 36%, 53%);
 }
 
+.aquamarine-tag-back-color {
+    background-color: hsl(207, 40%, 58%);
+}
+
 .emerald-tag-back-color {
     background-color: hsl(122, 29%, 53%);
 }
