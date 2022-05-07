@@ -22,6 +22,21 @@
             }
         },
         {
+            "label": "Webgen-Watch",
+            "type": "shell",
+            "command": "../Webgen/publish/HARUBY Webgen/HarubyCom.exe",
+            "args": [
+                "watch",
+                "-s",
+                "${workspaceFolder}/Source",
+                "-t",
+                "${workspaceFolder}/public",
+                "-z",
+                "${workspaceFolder}/../Webgen/HarubyCom"
+            ],
+            "problemMatcher": []
+        },
+        {
             "label": "Webgen-Server",
             "type": "shell",
             "command": "../Webgen/publish/HARUBY Webgen/Server.exe",
