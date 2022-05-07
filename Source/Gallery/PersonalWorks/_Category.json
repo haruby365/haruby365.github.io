@@ -1,5 +1,11 @@
 {
     "Order": 0,
     "Title": "Personal Works",
-    "Slug": "personalWorks"
+    "Slug": "personalWorks",
+    "ThumbnailImageSuffix": "t",
+    "ImageSuffixList": [
+        "ms",
+        "full",
+        "process"
+    ]
 }
