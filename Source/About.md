@@ -21,6 +21,6 @@
       * And more.
    1. Doing personal works.
       * Character design and illustration.
-      * Character animation application.
+      * Custom rendering application based on Ray-tracing & PBR.
 
-   <p class="post-comment">Updated in 2022 January</p>
+   <p class="post-comment">Updated in 2022 June</p>
