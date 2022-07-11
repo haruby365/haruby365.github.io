@@ -312,6 +312,10 @@ blockquote:after {
     background-color: hsl(16, 25%, 42%);
 }
 
+.ruby-tag-back-color {
+    background-color: hsl(340, 36%, 56%);
+}
+
 .amethyst-tag-back-color {
     background-color: hsl(291, 32%, 46%);
 }
