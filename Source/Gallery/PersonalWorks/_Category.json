@@ -5,6 +5,7 @@
     "ThumbnailImageSuffix": "t",
     "ImageSuffixList": [
         "ms",
+        "mcu",
         "full",
         "process"
     ]

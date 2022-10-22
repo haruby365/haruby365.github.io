@@ -173,6 +173,9 @@ blockquote:after {
 .pixiv-back-color {
     background-color: #0096fa;
 }
+.instagram-back-color {
+    background-color: #E1306C;
+}
 .artstation-back-color {
     background-color: #13aff0;
 }
@@ -307,6 +310,10 @@ blockquote:after {
 }
 .tag-back-color15 {
     background-color: hsl(16, 25%, 42%);
+}
+
+.ruby-tag-back-color {
+    background-color: hsl(340, 36%, 56%);
 }
 
 .amethyst-tag-back-color {

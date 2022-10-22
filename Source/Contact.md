@@ -10,6 +10,9 @@
 
    * Pixiv  
    [http://pixiv.me/haruby](http://pixiv.me/haruby)
+   
+   * Instagram  
+   [https://www.instagram.com/haruby365/](https://www.instagram.com/haruby365/)
 
    * ArtStation  
    [https://www.artstation.com/haruby](https://www.artstation.com/haruby)
