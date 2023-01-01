@@ -3,6 +3,10 @@
     "Date": "2022-12-26",
     "Tags": [
     ],
+    "ImageSuffixList": [
+        "full",
+        "ms"
+    ],
     "ThumbnailImageSuffix": "ms",
     "NaverBlogUrl": "https://blog.naver.com/haruby365/222965780452",
     "PixivUrl": "https://www.pixiv.net/artworks/103948897",
