@@ -19,7 +19,7 @@
       * Photoshop extensions.
       * Digital artist assistant applications.
       * And more.
-   1. Doing personal works.
-      * In developing with Unreal Engine 5.
+   1. Developing economic simulation game with Unity.
+      * Please check [my blog](https://blog.naver.com/PostList.naver?blogId=haruby365&from=postList&categoryNo=19)(Korean) if you interested.
 
-   <p class="post-comment">Updated in 2022 October</p>
+   <p class="post-comment">Updated in 2023 April</p>
