@@ -1,12 +1,12 @@
 ## About
 
-   > _Game Engine Programmer & Character illustrator_
+   > _Game Programmer & Character illustrator_
 
    1. Learned dessin and watercolor.
    1. Chemistry major.
       * Developed an Android app detects medical test strip.
-   1. Self-studied Unreal Engine.
-      * From UDK(free version of UE3)
+   1. Self-studied the Unreal Engine.
+      * From UDK(free version of UE3).
    1. Self-studied programming.
       * C/C++, C# and others. x86, Java, Javascript, HTML etc.
       * .NET, Android, Win32, MariaDB etc.
@@ -19,7 +19,7 @@
       * Photoshop extensions.
       * Digital artist assistant applications.
       * And more.
-   1. Moved to the Unity.
+   1. Moved to the Unity Engine.
    1. Doing personal artworks and development.
       * Please check [my social medias](/contact/) if you interested.
 
