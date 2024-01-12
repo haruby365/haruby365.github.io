@@ -4,16 +4,12 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Webgen-Generate",
+            "label": "Build",
             "type": "shell",
-            "command": "../Webgen/publish/HARUBY Webgen/HarubyCom.exe",
+            "command": "npm",
             "args": [
-                "-s",
-                "${workspaceFolder}/Source",
-                "-t",
-                "${workspaceFolder}/public",
-                "-z",
-                "${workspaceFolder}/../Webgen/HarubyCom"
+                "run",
+                "build"
             ],
             "problemMatcher": [],
             "group": {
@@ -22,26 +18,12 @@
             }
         },
         {
-            "label": "Webgen-Watch",
+            "label": "Server",
             "type": "shell",
-            "command": "../Webgen/publish/HARUBY Webgen/HarubyCom.exe",
+            "command": "npm",
             "args": [
-                "watch",
-                "-s",
-                "${workspaceFolder}/Source",
-                "-t",
-                "${workspaceFolder}/public",
-                "-z",
-                "${workspaceFolder}/../Webgen/HarubyCom"
-            ],
-            "problemMatcher": []
-        },
-        {
-            "label": "Webgen-Server",
-            "type": "shell",
-            "command": "../Webgen/publish/HARUBY Webgen/Server.exe",
-            "args": [
-                "${workspaceFolder}/public"
+                "run",
+                "start"
             ],
             "problemMatcher": []
         }

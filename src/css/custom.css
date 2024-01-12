@@ -1,0 +1,92 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Mega:wght@100..900&display=swap');
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0066cc;
+  --ifm-color-primary-dark: #005cb8;
+  --ifm-color-primary-darker: #0057ad;
+  --ifm-color-primary-darkest: #00478f;
+  --ifm-color-primary-light: #0070e0;
+  --ifm-color-primary-lighter: #0075eb;
+  --ifm-color-primary-lightest: #0a85ff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  font-family: "Inter", sans-serif, win-bug-omega, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 400;
+  --ifm-font-color-base: rgb(29, 29, 31);
+  --ifm-navbar-background-color: white;
+
+  --ifm-navbar-height: 84px;
+  --ifm-navbar-padding-horizontal: 24px;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #2997ff;
+  --ifm-color-primary-dark: #0b89ff;
+  --ifm-color-primary-darker: #0081fc;
+  --ifm-color-primary-darkest: #006bcf;
+  --ifm-color-primary-light: #47a5ff;
+  --ifm-color-primary-lighter: #55adff;
+  --ifm-color-primary-lightest: #82c2ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  --ifm-font-color-base: rgb(238, 238, 240);
+  --ifm-navbar-background-color: rgb(39, 39, 41);
+}
+
+html {
+  --ifm-background-color: white;
+}
+html[data-theme='dark'] {
+  --ifm-background-color: #101011;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #282829;
+}
+
+.navbar__title {
+  font-family: "Lexend Mega", sans-serif, win-bug-omega, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 600;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.footer__link-separator {
+  display: none;
+}
+
+.footer__link-icon {
+  margin: 0 8px;
+  width: 1.6em;
+  height: 1.6em;
+  transition: .3s ease;
+}
+.footer__link-icon:hover {
+  opacity: 0.7;
+}
+
+.footer__link-icon-item:link,
+.footer__link-icon-item:visited,
+.footer__link-icon-item:hover,
+.footer__link-icon-item:active {
+  text-decoration: none;
+}
+
+.footer__copyright {
+  font-size: small;
+}
+
+.post-comment {
+  font-style: italic;
+  font-size: small;
+  text-align: end;
+}
