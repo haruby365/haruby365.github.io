@@ -1,0 +1,112 @@
+.hero {
+    background-color: black;
+    padding: 2.4rem;
+}
+
+.heroInner {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 1.4rem;
+}
+
+.heroLogo {
+    float: right;
+    margin: 0 0 1rem 1rem;
+    width: 12rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.heroProjectTagLine {
+    color: white;
+    font-size: 4rem;
+}
+.heroProjectDescLine {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.heroTitleTextHtml b {
+    color: var(--ifm-color-primary);
+}
+
+.indexCtas {
+    --ifm-button-size-multiplier: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.indexCtas a,
+.indexCtas a:hover {
+    color: black;
+}
+
+.indexCtas a:last-of-type {
+    margin: 1.2rem 2.4rem;
+}
+
+.indexCtasButtonExternalIcon > svg {
+    margin-left: 0.3em;
+}
+
+.featureImageRound {
+    width: auto;
+    max-height: 10rem;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.featureImageRect {
+    width: auto;
+    max-height: 10rem;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+
+.featureHeading {
+    font-size: var(--ifm-h3-font-size);
+}
+
+.featureRowFirst {
+    margin-top: 3.5rem;
+}
+.featureRowLast {
+    margin: 0;
+}
+
+.featureItemContainer {
+    margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .heroLogo {
+        display: block;
+        float: none;
+        margin: 1rem auto;
+    }
+    .heroProjectTagLine {
+        display: block;
+        text-align: center;
+        margin: 0 0 0.5rem 0;
+        font-size: 2.4rem;
+    }
+    .heroProjectDescLine {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .indexCtas {
+        margin-top: 1.8rem;
+        justify-content: center;
+    }
+    .indexCtas a {
+        margin: 1rem;
+    }
+    
+    .featureItemContainer {
+        margin-bottom: 3.5rem;
+    }
+}
