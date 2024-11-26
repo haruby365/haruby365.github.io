@@ -19,8 +19,8 @@
       * Photoshop extensions.
       * Digital artist assistant applications.
       * And more.
-   1. Moved to the Unity Engine.
-   1. Doing personal artworks and development.
+   1. Moved to the Unity Engine since 2023.
+   1. Developing a game with the Unity Engine and AI technologies.
       * Please check [my social medias](/contact/) if you interested.
 
-   <p class="post-comment">Updated in 2023 November</p>
+   <p class="post-comment">Updated in 2024 November</p>
